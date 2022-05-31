@@ -81,3 +81,4 @@ class ServidorForm(forms.ModelForm):
             'sexo': forms.Select(attrs={'class': 'form-control'}),
             'nascionalidade': forms.Select(attrs={'class': 'form-control'}),
         }
+

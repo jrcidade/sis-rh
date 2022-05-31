@@ -130,7 +130,7 @@ class Servidor(models.Model):
     uf_naturalizacao = models.CharField(max_length=20, choices=UF, null=True, verbose_name='UF de Naturalização', blank=True)
     estado_civil = models.CharField(max_length=15, choices=ESTADO_CIVIL, verbose_name='Estado Civil', null=True, blank=True)
     raca = models.CharField(max_length=15, choices=RACA, verbose_name='Raça', null=True, blank=True)
-    tipo_deficiencia = models.CharField(max_length=20, choices=TIPO_DEFICIENCIA, null=True, verbose_name='Tipo Deficiencia', blank=True)
+    tipo_deficiencia = models.CharField(max_length=20, choices=TIPO_DEFICIENCIA, null=True, verbose_name='Tipo Deficiência', blank=True)
     rg = models.CharField(max_length=100, verbose_name='RG nº')
     orgao_emisso = models.CharField(max_length=20, verbose_name='Orgão Emissor', null=True, blank=True)
     uf_rg = models.CharField(max_length=20, choices=UF, verbose_name='UF Emissor', null=True, blank=True)

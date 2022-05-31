@@ -34,12 +34,16 @@
                         </h1>
                     </div>
 
+
                     <div class="col-sm-4">
                         <div class="float-sm-right">
                             <a href="{% url 'add-servidor' %}" class="btn btn-success rounded-pill">
                                 <i class="fa fa-plus"></i>
                                 Adicionar
                             </a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="{% url 'export-csv' %}" class="btn btn-secondary rounded-pill">Exporta CSV</a>
                         </div>
                     </div>
                 </div>
@@ -68,10 +72,10 @@
                                     {% for servidor in servidores %}
                                         {% block js %}
                                             <script>
-                                                function delContrato(id) {
+                                                function delServidor(id) {
                                                     Swal.fire({
                                                         title: 'Confirma Exclusão',
-                                                        text: 'Deseja realmente excluir a Empresa?',
+                                                        text: 'Deseja realmente excluir o Servidor?',
                                                         icon: 'question',
                                                         showCancelButton: true,
                                                         cancelButtonText: 'Cancelar',
@@ -81,7 +85,7 @@
                                                     })
                                                         .then(function (result) {
                                                             if (result.isConfirmed) {
-                                                                window.location.href = ""
+                                                                window.location.href = "{% url 'del-servidor' servidor.id %}"
                                                             }
                                                         })
                                                 }
@@ -104,7 +108,7 @@
                                                    class="btn btn-xs text-gray btn-box-tool p-0">
                                                     <i class="fa fa-edit"></i>
                                                 </a>
-                                                <a href="#" onclick="" title="Excluir"
+                                                <a href="#" onclick="delServidor({{ servidor.id }})" title="Excluir"
                                                    class="btn btn-xs text-danger btn-box-tool p-0">
                                                     <i class="fa fa-trash-alt"></i>
                                                 </a>

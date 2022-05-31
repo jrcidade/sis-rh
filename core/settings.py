@@ -4,6 +4,9 @@ Copyright (c) 2019 - present AppSeed.us
 """
 
 import os
+from functools import partial
+
+import dj_database_url
 from decouple import config
 from unipath import Path
 
@@ -78,6 +81,7 @@ DATABASES = {
         'NAME': 'db.sqlite3',
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
