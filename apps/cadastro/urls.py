@@ -13,6 +13,7 @@ urlpatterns = [
     path('addservidor/', views.addServidor, name='add-servidor'),
     path('export_csv/', views.export_csv, name='export-csv'),
     path('delservidor/<int:id>/', views.delServidor, name='del-servidor'),
+    path('editservidor/<int:id>/', views.editServidor, name='edit-servidor'),
 
     # Matches any html file
     re_path(r'^.*\.*', views.pages, name='pages'),

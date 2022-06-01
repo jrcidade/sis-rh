@@ -76,6 +76,25 @@ def delServidor(request, id):
 
 
 @login_required(login_url="/login/")
+def editServidor(request, id):
+    servidor = get_object_or_404(Servidor, pk=id)
+    form = ServidorForm(instance=servidor)
+
+    if request.method == 'POST':
+        form = ServidorForm(request.POST or None, instance=servidor)
+
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Cadastro atualizado com Sucesso')
+            return redirect('list-cadastro')
+        else:
+            return render(request, 'cadastro/editservidor.html', {'form': form})
+    else:
+        return render(request, 'cadastro/editservidor.html', {'form': form})
+
+
+
+@login_required(login_url="/login/")
 def export_csv(request):
     response = HttpResponse(content_type='text/csv')
 

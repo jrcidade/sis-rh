@@ -43,7 +43,10 @@
                             </a>
                         </div>
                         <div class="col-sm-4">
-                            <a href="{% url 'export-csv' %}" class="btn btn-secondary rounded-pill">Exporta CSV</a>
+                            <a href="{% url 'export-csv' %}" class="btn btn-secondary rounded-pill">
+                                <i class="fa fa-file-export"></i>
+                                Exporta CSV
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -104,7 +107,7 @@
                                                    class="btn btn-xs text-gray btn-box-tool p-0">
                                                     <i class="fa fa-search"></i>
                                                 </a>
-                                                <a href="" title="Editar"
+                                                <a href="{% url 'edit-servidor' servidor.id %}" title="Editar"
                                                    class="btn btn-xs text-gray btn-box-tool p-0">
                                                     <i class="fa fa-edit"></i>
                                                 </a>
