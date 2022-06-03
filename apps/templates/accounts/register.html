@@ -23,10 +23,10 @@
 
   <div class="register-box">
 
-    <div class="login-logo">
-        <a target="_blank" rel="noopener noreferrer" 
-           href="https://appseed.us/admin-dashboards/django-dashboard-adminlte">Django <b>Admin</b>LTE</a>
-    </div>    
+{#    <div class="login-logo">#}
+{#        <a target="_blank" rel="noopener noreferrer" #}
+{#           href="https://appseed.us/admin-dashboards/django-dashboard-adminlte">Django <b>Admin</b>LTE</a>#}
+{#    </div>    #}
 
     <div class="card">
       <div class="card-body register-card-body">
@@ -35,7 +35,7 @@
                 <span class="text-danger">{{ msg | safe }}</span>
             {% else %}
             <span>
-                Add your credentials
+                Adicione suas credenciais
             </span>
             {% endif %}            
         </p>
@@ -86,31 +86,31 @@
           
           <div class="row">
             <div class="col-8">
-              <div class="icheck-primary">
-                <input type="checkbox" id="agreeTerms" name="terms" value="agree">
-                <label for="agreeTerms">
-                I agree to the <a href="#">terms</a>
-                </label>
-              </div>
+{#              <div class="icheck-primary">#}
+{#                <input type="checkbox" id="agreeTerms" name="terms" value="agree">#}
+{#                <label for="agreeTerms">#}
+{#                Eu faço parte do RH da SEADI <a href="#">concordo</a>#}
+{#                </label>#}
+{#              </div>#}
             </div>
             <!-- /.col -->
             <div class="col-4">
-              <button type="submit" name="register" class="btn btn-primary btn-block">Register</button>
+              <button type="submit" name="register" class="btn btn-primary btn-block">Registro</button>
             </div>
             <!-- /.col -->
           </div>
         </form>
 
         <br />
-        <div class="text-center">
-            Have an account? <a href="{% url 'login' %}" class="text-center">Login</a>
-            <br />
-            <br />
-            &copy; ColorLib 
-            <a target="_blank" rel="noopener noreferrer"
-               href="https://appseed.us/admin-dashboards/django-dashboard-adminlte"><b>Admin</b>LTE</a> 
-            - coded by <a target="_blank" rel="noopener noreferrer" href="https://appseed.us">AppSeed</a>.
-        </div>
+{#        <div class="text-center">#}
+{#            Have an account? <a href="{% url 'login' %}" class="text-center">Login</a>#}
+{#            <br />#}
+{#            <br />#}
+{#            &copy; ColorLib #}
+{#            <a target="_blank" rel="noopener noreferrer"#}
+{#               href="https://appseed.us/admin-dashboards/django-dashboard-adminlte"><b>Admin</b>LTE</a> #}
+{#            - coded by <a target="_blank" rel="noopener noreferrer" href="https://appseed.us">AppSeed</a>.#}
+{#        </div>#}
 
       </div>
       <!-- /.form-box -->
