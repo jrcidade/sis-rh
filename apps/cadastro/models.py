@@ -4,36 +4,37 @@ from django.db import models
 class Servidor(models.Model):
 
     SEXO = (
-        ('MASCULINO', 'MASCULINO'),
-        ('FEMININO', 'FEMININO'),
+        ('Masculino', 'Masculino'),
+        ('Feminino', 'Feminino'),
     )
 
     UF = (
         ('AC', 'Acre'),
         ('AL', 'Alagoas'),
         ('AP', 'Amapá'),
+        ('AM', 'Amazonas'),
         ('BA', 'Bahia'),
         ('CE', 'Ceará'),
         ('DF', 'Distrito Federal'),
         ('ES', 'Espírito Santo'),
         ('GO', 'Goiás'),
-        ('MA', 'Maranão'),
-        ('MG', 'Minas Gerais'),
-        ('MS', 'Mato Grosso do Sul'),
+        ('MA', 'Maranhão'),
         ('MT', 'Mato Grosso'),
+        ('MS', 'Mato Grosso do Sul'),
+        ('MG', 'Minas Gerais'),
         ('PA', 'Pará'),
         ('PB', 'Paraíba'),
+        ('PR', 'Paraná'),
         ('PE', 'Pernanbuco'),
         ('PI', 'Piauí'),
-        ('PR', 'Paraná'),
         ('RJ', 'Rio de Janeiro'),
         ('RN', 'Rio Grande do Norte'),
+        ('RS', 'Rio Grande do Sul'),
         ('RO', 'Rondônia'),
         ('RR', 'Roraima'),
-        ('RS', 'Rio Grande do Sul'),
         ('SC', 'Santa Catarina'),
-        ('SE', 'Sergipe'),
         ('SP', 'São Paulo'),
+        ('SE', 'Sergipe'),
         ('TO', 'Tocantins'),
     )
 
